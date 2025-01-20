@@ -54,3 +54,9 @@ models:
         description: "Product category for which the target is defined."
       - name: Target
         description: "Sales target for the given category and month."
+
+tests:
+  - name: no_negative_sales
+    description: "Ensure there are no negative sales."
+    arguments:
+      model: ref('OrderBreakdown')
