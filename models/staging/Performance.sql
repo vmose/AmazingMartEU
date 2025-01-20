@@ -1,6 +1,6 @@
 with SalesByMonth as (
     select
-        date_trunc(cast(lo.orderdate as date), month) as Month,
+        FORMAT_DATE('%b-%y', orderdate) AS Month,
         ob.category,
         sum(ob.sales) as TotalSales
     from {{ ref('ListOfOrders') }} lo
