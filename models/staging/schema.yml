@@ -1,21 +1,56 @@
-
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: ListOfOrders
+    description: "Contains details about customer orders, including order information, customer details, and shipping data."
     columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+      - name: orderid
+        description: "Unique identifier for each order."
+      - name: orderdate
+        description: "Date when the order was placed."
+      - name: customername
+        description: "Name of the customer who placed the order."
+      - name: city
+        description: "City of the customer."
+      - name: country
+        description: "Country of the customer."
+      - name: region
+        description: "Region where the order was placed."
+      - name: segment
+        description: "Customer segment (e.g., Consumer, Corporate)."
+      - name: shipdate
+        description: "Date when the order was shipped."
+      - name: shipmode
+        description: "Mode of shipping used for the order."
+      - name: state
+        description: "State of the customer."
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: OrderBreakdown
+    description: "Provides detailed information about the products in each order, including sales, discounts, and profit."
     columns:
-      - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+      - name: orderid
+        description: "Unique identifier for each order, linking to ListOfOrders."
+      - name: productname
+        description: "Name of the product in the order."
+      - name: discount
+        description: "Discount applied to the product."
+      - name: sales
+        description: "Total sales amount for the product."
+      - name: profit
+        description: "Profit made from the product."
+      - name: quantity
+        description: "Quantity of the product sold."
+      - name: category
+        description: "Category of the product."
+      - name: subcategory
+        description: "Subcategory of the product."
+
+  - name: SalesTargets
+    description: "Contains target sales data categorized by month and product category."
+    columns:
+      - name: MonthofOrderDate
+        description: "Month corresponding to the order date."
+      - name: Category
+        description: "Product category for which the target is defined."
+      - name: Target
+        description: "Sales target for the given category and month."
