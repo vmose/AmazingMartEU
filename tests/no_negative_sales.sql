@@ -3,5 +3,7 @@ WITH validation AS (
     FROM {{ ref('OrderBreakdown') }}
     WHERE sales < 0
 )
-SELECT COUNT(*) = 0 AS is_valid
-FROM validation;
+-- SELECT COUNT(*) = 0 AS is_valid
+-- FROM validation;
+
+SELECT * FROM validation
