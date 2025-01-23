@@ -71,7 +71,7 @@ All date-related fields are explicitly cast to `DATE` to ensure compatibility wi
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone <repository_url>
+   git clone <https://github.com/vmose/AmazingMartEU>
    cd amazingmart-sales-analytics
    ```
 2. Install dbt:
