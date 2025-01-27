@@ -1,6 +1,5 @@
 
 with SalesTargets as (
-
     select
         MonthofOrderDate,
         Category,
