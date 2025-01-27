@@ -1,4 +1,4 @@
 {
     "dbt.queryLimit": 1000000,
-    "dbt.perspectiveTheme": "Vintage"
+    "dbt.perspectiveTheme": "Pro Dark"
 }
